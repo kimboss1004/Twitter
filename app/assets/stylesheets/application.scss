@@ -1,0 +1,185 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.flasher {
+  margin-left: 10px;
+  width: 80%;
+  position: absolute;
+  top: 50px;
+  z-index: 1500;
+  text-align: center;
+}
+
+.navbar {
+  z-index: 1030;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 0px;
+  background-color: #ffffff;
+}
+.navbar-default .navbar-brand {
+  color: black;
+}
+
+.navbar-default .container-fluid {
+  background-color: #ffffff;
+}
+
+a.navbar-brand {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 40px;
+}
+
+#ul_nav {
+  margin-right: 50px;
+}
+
+.shift {
+  margin-left: 20px;
+}
+
+.box-me {
+  box-shadow: 6px 6px 8px #777;
+  background-color: white;
+  text-align: center;
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-right: 50px;
+  padding: 30px;
+
+}
+
+.register {
+  width: 600px;
+  position: relative;
+  right: 350px;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  background-image: url("/clouds.jpg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.blue-rect {
+  background-color: #F0FFFF;
+  margin-top: 50px;
+  height: 150px;
+  width: 100%;
+}
+
+div.profile_nav {
+  border: solid 1px #E6E6E6;
+  height: 60px;
+  width: 100%;
+} 
+
+div.profile-center {
+  width: 400px;
+  hieght: 100%;
+  margin-top: 10px;;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+div.profile-edit-button {
+  float: right;
+  position: relative;
+  bottom: 40px;
+  right: 30px;
+  display: inline-block;
+}
+
+div.my-tweets {
+  margin-top: 20px;
+  background-color: white;
+  border: solid 1px #E6E6E6;
+  margin-bottom: 30px;
+}
+
+#profile-name {
+  position: relative;
+  left: 20px;
+  bottom: 5px;
+  float: left;
+}
+
+.profile-background {
+  background-image: url("/clouds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  height: auto;
+
+  width: 100%;
+  float: bottom;
+}
+
+.propic-container  {
+    position: relative;
+    left: 30px;
+    width: 300px;
+    height: 100%;
+}
+
+.propic-img {
+    box-shadow: 6px 6px 8px #777;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+#footer {
+    background-color: #90d7f3;
+    float: bottom;
+    height: auto;
+    width: 100%;
+}
+
+.your-tweets {
+  box-shadow: 6px 6px 8px #777;
+  background-color: white;
+  text-align: center;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background-color: #83BCDA;
+  
+}
+
+
+
+

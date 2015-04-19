@@ -1,0 +1,36 @@
+    <div class="row">
+      <div class="col-md-2 col-xs-2"></div>
+      <div class="col-md-8 col-xs-8 my-tweets well">
+        <h4>
+        <% if status.parent_status.nil? %>
+          <%= link_to status.creator.username, user_path(status.creator) %> 
+        <% else %>
+          <%= link_to status.parent_status.creator.username, status_path(status.parent_status) %>   (*retweeted* by <%= link_to status.creator.username, user_path(status.creator) %>) 
+        <% end %>
+          <small>- <%= display_date(status.created_at) %></small>
+        </h4>
+        <div class="well">
+          <p><%= auto_links(status).html_safe %></p>
+        </div>
+        
+        <small>
+          <% if creator?(status.creator) %>
+            <%= link_to edit_status_path(status) do%>
+              <i class="glyphicon glyphicon-edit"></i>
+              Edit
+              <% end %>
+            &nbsp;&nbsp;   
+            <%= link_to status_path(status), method: :delete do %>
+              <i class="glyphicon glyphicon-trash"></i>
+              Delete
+            <% end %>
+          <% else %>
+            &nbsp;&nbsp;   
+            <%= link_to retweet_status_path(status), method: :post do %>
+              <i class="glyphicon glyphicon-send"></i>
+              Retweet
+            <% end %>
+          <% end %>
+        </small>
+      </div>
+    </div>

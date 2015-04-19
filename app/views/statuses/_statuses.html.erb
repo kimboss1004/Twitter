@@ -1,0 +1,5 @@
+<div class="container-fluid">
+  <% statuses.reverse.each do |status| %>
+    <%= render 'statuses/status', status: status %>
+  <% end %>  
+</div>

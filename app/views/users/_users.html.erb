@@ -1,0 +1,24 @@
+<% users.each do |user| %>
+  <div class="row">
+    <div class="col-md-9 col-xs-8">
+      <strong><%= user.username %></strong>
+    </div>
+    <div class="col-md-3 col-xs-4">
+      <small>
+        <%= link_to user_path(user) do%>
+          <i class="glyphicon glyphicon-user"></i>
+          Profile
+        <% end %>
+        &nbsp;&nbsp;  
+        <% if user != current_user %>
+        <% if !following?(user) %>
+        <%= link_to "Follow", follow_user_path(user), method: :post, class: "btn btn-success" %>
+        <% else %>
+          <%= link_to "Unfollow", unfollow_user_path(user), method: :delete, class: "btn btn-info" %>
+        <% end %>
+        <% end %>
+      </small>              
+    </div>
+  </div>
+  <hr/>
+<% end %>

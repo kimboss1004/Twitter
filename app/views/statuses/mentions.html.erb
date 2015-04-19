@@ -1,0 +1,19 @@
+<br/>
+<br/>
+<div class="background">
+  <div class="profile-background">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3 my-tweets well your-tweets">
+          <h2>Mentions</h2>
+        </div>
+      </div>
+      <% @mentions.reverse.each do |mention| %>
+        <%= render 'statuses/status', status: mention.status %>
+      <% end %>  
+    </div>
+  </div>
+</div>
+
+

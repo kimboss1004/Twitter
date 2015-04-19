@@ -1,0 +1,13 @@
+<%= form_tag(login_path, method: :post) do %>
+<div class="control-group">
+  <%= text_field_tag :username, nil, placeholder: "Enter username" %>
+</div>
+<div class="control-group">
+  <%= password_field_tag :password, nil, placeholder: "Enter password" %>
+</div>
+<br/>
+<%= submit_tag('Log in', class: 'btn btn-primary') %>
+<% end %>
+
+
+

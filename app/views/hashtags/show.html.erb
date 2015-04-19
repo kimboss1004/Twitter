@@ -1,0 +1,13 @@
+<br/>
+<br/>
+<div class="background">
+  <div class="profile-background">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-3 my-tweets well your-tweets">
+        <h2>#<%= params[:id] %></h2>
+      </div>
+    </div>
+    <%= render 'statuses/statuses', statuses: @statuses %>
+  </div>
+</div>
